@@ -25,8 +25,8 @@ export default async function ContactSection() {
               <Mail className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-            <a href={`mailto:${profile?.emailAddress || "Alokyadav83956@gmail.com"}`} className="text-gray-400 hover:text-neon-blue transition-colors">
-              {profile?.emailAddress || "Alokyadav83956@gmail.com"}
+            <a href={`mailto:${profile?.emailAddress || "tannup245@gmail.com"}`} className="text-gray-400 hover:text-neon-blue transition-colors">
+              {profile?.emailAddress || "tannup245@gmail.com"}
             </a>
           </CardContent>
         </Card>
@@ -38,7 +38,7 @@ export default async function ContactSection() {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Location</h3>
             <p className="text-gray-400">
-              India
+              Bareilly, Uttar Pradesh, India
             </p>
           </CardContent>
         </Card>
@@ -49,7 +49,7 @@ export default async function ContactSection() {
               <Briefcase className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">LinkedIn</h3>
-            <a href={profile?.linkedinUrl || "https://www.linkedin.com/in/alok-yadav-906920292/"} target="_blank" className="text-gray-400 hover:text-[#0a66c2] transition-colors">
+            <a href={profile?.linkedinUrl || "https://linkedin.com/in/tannupriya"} target="_blank" className="text-gray-400 hover:text-[#0a66c2] transition-colors">
               Connect with me
             </a>
           </CardContent>

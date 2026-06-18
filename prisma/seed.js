@@ -17,54 +17,51 @@ async function main() {
   console.log("Seeding database...");
 
   // Seed Admin
-  const adminExists = await prisma.admin.findUnique({ where: { email: 'admin@alokyadav.com' } });
+  const adminExists = await prisma.admin.findUnique({ where: { email: 'tannup245@gmail.com' } });
   if (!adminExists) {
-    const hashedPassword = await bcrypt.hash('admin123', 10);
+    const hashedPassword = await bcrypt.hash('tannu123', 10);
     await prisma.admin.create({
       data: {
-        email: 'admin@alokyadav.com',
+        email: 'tannup245@gmail.com',
         password: hashedPassword,
-        name: 'Alok Yadav',
+        name: 'Tannu Priya',
       }
     });
-    console.log("Admin created (admin@alokyadav.com / admin123)");
+    console.log("Admin created (tannup245@gmail.com / tannu123)");
   }
 
   // Seed Profile Info
   await prisma.profileInfo.create({
     data: {
-      name: "Alok Yadav",
-      titles: ["Full Stack Developer", "Tech Associate", "Startup Builder"],
-      bio: "I build scalable web applications, intelligent software systems, and real-world digital products that solve meaningful problems. Currently serving as a Tech Associate at Invertis Innovation & Incubation, I work on product development, startup incubation projects, AI-powered solutions, and enterprise-grade software systems.",
-      heroImage: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=800&q=80",
-      githubUrl: "https://github.com/alokyadav",
-      linkedinUrl: "https://linkedin.com/in/alokyadav",
-      twitterUrl: "https://twitter.com/alokyadav",
-      emailAddress: "admin@alokyadav.com"
+      name: "Tannu Priya",
+      titles: ["Python Intern", "AI & Data Science Enthusiast", "B.Tech CSE Student"],
+      bio: "I am a Computer Science Engineering student at Invertis University with a strong interest in Artificial Intelligence, Data Science, and Python Development. Currently working as a Python Intern at Aarvion Technologies, I am gaining practical experience in programming, problem-solving, and real-world application development. I am passionate about learning emerging technologies and continuously improving my technical skills through projects, internships, and certifications.",
+      heroImage: "/portfolio-screenshot.png", 
+      resumeLink: "/resume.pdf",
+      githubUrl: "", 
+      linkedinUrl: "https://www.linkedin.com/in/tannupriya", 
+      twitterUrl: "",
+      emailAddress: "tannup245@gmail.com"
     }
   });
 
   // Seed Stats
   await prisma.stat.createMany({
     data: [
-      { label: "Projects Built", value: "50+", icon: "Layout" },
-      { label: "Technologies", value: "20+", icon: "Code" },
-      { label: "Hours of Coding", value: "1000+", icon: "Zap" },
-      { label: "Startup Solutions", value: "5+", icon: "Rocket" },
+      { label: "Projects Built", value: "10+", icon: "Layout" },
+      { label: "Technologies", value: "5+", icon: "Code" },
+      { label: "Hours of Coding", value: "500+", icon: "Zap" },
+      { label: "Certifications", value: "5+", icon: "Award" },
     ]
   });
 
-  // Seed Services
+  // Seed Services (Areas of Interest)
   await prisma.service.createMany({
     data: [
-      { title: "Full Stack Web Development", description: "Custom web applications built with modern technologies using MERN/Next stack.", iconName: "Code" },
-      { title: "SaaS Product Development", description: "Design and development of scalable subscription-based software platforms.", iconName: "Monitor" },
-      { title: "AI-Powered Applications", description: "Integrating AI/ML models and intelligent features to build smarter applications.", iconName: "BrainCircuit" },
-      { title: "Startup MVP Development", description: "Turning ideas into minimum viable products and helping startups launch faster.", iconName: "Rocket" },
-      { title: "Database Architecture", description: "Designing efficient database schemas and optimized queries for high performance.", iconName: "Database" },
-      { title: "Cloud & DevOps Solutions", description: "Deploying scalable applications using cloud platforms and DevOps best practices.", iconName: "Cloud" },
-      { title: "UI/UX Focused Development", description: "Building beautiful, intuitive and user-friendly interfaces that drive engagement.", iconName: "Layout" },
-      { title: "Enterprise Software Systems", description: "Developing secure, scalable and maintainable enterprise-grade software solutions.", iconName: "Shield" },
+      { title: "Python Programming", description: "Developing Python-based programs and applications with strong logical thinking.", iconName: "Code" },
+      { title: "Artificial Intelligence", description: "Exploring AI concepts and implementing beginner-level AI applications.", iconName: "BrainCircuit" },
+      { title: "Data Science", description: "Working with datasets to perform analysis, visualization, and derive meaningful insights.", iconName: "Database" },
+      { title: "Machine Learning", description: "Learning and implementing Machine Learning models and intelligent systems.", iconName: "Monitor" },
     ]
   });
 
@@ -72,83 +69,64 @@ async function main() {
   await prisma.project.createMany({
     data: [
       {
-        title: "Invertis Bus Saarthi",
-        description: "A smart transportation management platform designed to solve bus overcrowding and seat availability issues through real-time tracking and intelligent seat monitoring.",
-        techStack: ["React", "Node.js", "MongoDB", "Express", "Socket.IO"],
+        title: "🏆 Krishi: Smart Advisory AI (3rd Position – Inverthon 2.0)",
+        description: "An AI-powered agricultural assistance platform designed to support small and marginal farmers. Features include an AI-based crop advisory system, soil analysis, smart irrigation guidance, and a voice-enabled chatbot for instant farmer support. Secured 3rd position among multiple teams.\nRole: Team Member – Quanta Byte\nStatus: Academic Project",
+        techStack: ["Artificial Intelligence", "Machine Learning", "NLP", "Chatbot", "Web Technologies"],
         featured: true,
-        imageUrl: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/krishi-smart-advisory-AI.png",
       },
       {
-        title: "TripDekho",
-        description: "An enterprise-grade travel and tourism platform connecting travelers with destinations, tour packages, hotels, and local experiences.",
-        techStack: ["Next.js", "Node.js", "MongoDB", "Cloudinary"],
+        title: "🚗 Smart EV Charging Monitoring System",
+        description: "Developed a smart monitoring system for Electric Vehicle charging stations to monitor charging performance, energy consumption, and charging status in real time. Improves charging efficiency and energy management.\nRole: Project Developer and Research Contributor\nStatus: Academic Project",
+        techStack: ["Python", "IoT", "Sensors", "Data Monitoring"],
         featured: true,
-        imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
       },
       {
-        title: "SIVI AI",
-        description: "An intelligent voice-controlled operating system that enables users to interact naturally with technology through AI-powered voice commands.",
-        techStack: ["AI APIs", "Node.js", "React", "Speech Recognition"],
+        title: "⚡ Smart Energy Meter",
+        description: "Designed a smart energy meter system for monitoring and analyzing electricity consumption. Promotes energy-efficient behavior and better power management.\nRole: Project Developer\nStatus: Academic Project",
+        techStack: ["IoT", "Embedded Systems", "Data Analytics"],
         featured: true,
-        imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/smart-meter-hardware.png",
       },
       {
-        title: "Smart Complaint Management System",
-        description: "A role-based university maintenance platform where students can report issues through images and descriptions, while administrators manage workflows efficiently.",
-        techStack: ["MERN Stack", "Cloud Storage", "RBAC Architecture"],
+        title: "🌬 Smart Indoor Air Quality Monitoring System",
+        description: "Developed an IoT-based system to monitor indoor air quality and environmental conditions using sensors and cloud-based visualization. Provides real-time environmental awareness.\nRole: Project Team Member\nStatus: Completed Academic Project",
+        techStack: ["ThingsBoard", "IoT", "Sensors", "Cloud Monitoring"],
         featured: true,
-        imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/AQI.png",
+      },
+      {
+        title: "🏎 Team Garud Go-Kart Design & Development",
+        description: "Contributed to the design, documentation, safety analysis, and development activities of Electric and Combustion Go-Karts as a member of Team Garud, gaining practical exposure to automotive engineering, vehicle systems, teamwork, and technical project management.",
+        techStack: ["Electric Vehicle Technology", "Engineering Design", "Automotive Engineering"],
+        featured: true,
+        imageUrl: "https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        title: "Customer Purchase Behaviour Analysis Dashboard",
+        description: "An interactive Customer Purchase Behaviour Analysis dashboard using Excel to understand customer trends, sales performance, and profit patterns.\n\nProject Highlights:\n- Monthly Sales & Profit Trends\n- Category-wise Profit (Waterfall Chart)\n- Sales Share % by Category\n- State-wise Sales Map\n- Top 10 Product Categories\n- Dynamic Filters (Year, Segment, Region, State)\n\nKey Insights:\n- Technology category gives the highest profit\n- Phones & Chairs are top-selling items\n- Strong sales peak in November–December\n- California, New York & Texas lead in total revenue",
+        techStack: ["Excel", "Data Analysis", "Dashboard", "Data Visualization"],
+        featured: true,
+        imageUrl: "/customer-purchase-behaviour.png",
       }
     ]
   });
 
   // Seed Technical Skills
   const skills = [
-    { name: "React.js", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "JavaScript (ES6+)", category: "Frontend" },
-    { name: "TypeScript", category: "Frontend" },
-    { name: "HTML5", category: "Frontend" },
-    { name: "CSS3", category: "Frontend" },
-    { name: "Tailwind CSS", category: "Frontend" },
-    { name: "Bootstrap", category: "Frontend" },
-    { name: "Responsive Design", category: "Frontend" },
-    { name: "UI/UX Design", category: "Frontend" },
-    
-    { name: "Node.js", category: "Backend" },
-    { name: "Express.js", category: "Backend" },
-    { name: "REST APIs", category: "Backend" },
-    { name: "Authentication Systems", category: "Backend" },
-    { name: "Microservices", category: "Backend" },
-    { name: "Server Architecture", category: "Backend" },
-
-    { name: "MongoDB", category: "Database" },
-    { name: "MySQL", category: "Database" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "Database Design", category: "Database" },
-    { name: "Query Optimization", category: "Database" },
-
-    { name: "Git", category: "Cloud & DevOps" },
-    { name: "GitHub", category: "Cloud & DevOps" },
-    { name: "Docker", category: "Cloud & DevOps" },
-    { name: "Vercel", category: "Cloud & DevOps" },
-    { name: "Netlify", category: "Cloud & DevOps" },
-    { name: "Linux", category: "Cloud & DevOps" },
-    { name: "CI/CD", category: "Cloud & DevOps" },
-    { name: "Cloud Deployment", category: "Cloud & DevOps" },
-
-    { name: "Artificial Intelligence", category: "AI & Emerging Technologies" },
-    { name: "Machine Learning Integration", category: "AI & Emerging Technologies" },
-    { name: "Voice Assistants", category: "AI & Emerging Technologies" },
-    { name: "Prompt Engineering", category: "AI & Emerging Technologies" },
-    { name: "Automation Systems", category: "AI & Emerging Technologies" },
-
-    { name: "VS Code", category: "Development Tools" },
-    { name: "Postman", category: "Development Tools" },
-    { name: "Figma", category: "Development Tools" },
-    { name: "GitHub Actions", category: "Development Tools" },
-    { name: "Cloudinary", category: "Development Tools" },
-    { name: "Firebase", category: "Development Tools" },
+    { name: "Python Programming", category: "Programming" },
+    { name: "Programming Fundamentals", category: "Programming" },
+    { name: "Data Structures", category: "Programming" },
+    { name: "Artificial Intelligence", category: "Specialization" },
+    { name: "Machine Learning Basics", category: "Specialization" },
+    { name: "Data Analysis", category: "Specialization" },
+    { name: "Problem Solving", category: "Soft Skills" },
+    { name: "Team Collaboration", category: "Soft Skills" },
+    { name: "Communication", category: "Soft Skills" },
+    { name: "Quick Learning", category: "Soft Skills" },
+    { name: "Adaptability", category: "Soft Skills" },
+    { name: "Time Management", category: "Soft Skills" },
   ];
 
   await prisma.techSkill.createMany({
@@ -159,36 +137,12 @@ async function main() {
   await prisma.experience.createMany({
     data: [
       {
-        role: "Technical Associate",
-        company: "Invertis Innovation and Incubation",
-        startDate: "Sep 2025",
+        role: "Python Intern",
+        company: "Aarvion Technologies",
+        startDate: "Jan 2026",
         endDate: "Present",
         current: true,
-        description: "Technical Support, Support Services"
-      },
-      {
-        role: "Full-stack Developer",
-        company: "Arctic Innovage Private Limited",
-        startDate: "Jan 2025",
-        endDate: "Feb 2026",
-        current: false,
-        description: "Support Services and MERN Stack"
-      },
-      {
-        role: "Google Cloud Arcade Facilitator '25",
-        company: "Google Cloud Arcade Facilitator Program",
-        startDate: "Apr 2025",
-        endDate: "Jun 2025",
-        current: false,
-        description: "Google Cloud Platform (GCP)"
-      },
-      {
-        role: "Full-stack Developer",
-        company: "NullClass",
-        startDate: "Jan 2025",
-        endDate: "Mar 2025",
-        current: false,
-        description: "MERN Stack, Full-Stack Development"
+        description: "Learning and implementing core Python concepts. Developing Python-based programs and applications. Strengthening logical thinking and problem-solving abilities. Working on practical tasks and real-world programming scenarios. Gaining hands-on industry exposure through internship projects."
       }
     ]
   });
@@ -197,26 +151,25 @@ async function main() {
   await prisma.education.createMany({
     data: [
       {
-        degree: "Bachelor's of Computer Applications",
+        degree: "Bachelor of Technology (B.Tech) – Computer Science Engineering",
         institution: "Invertis University",
+        startDate: "Aug 2024",
+        endDate: "Aug 2028",
+        description: "Relevant Areas: Programming Fundamentals, Data Structures, Artificial Intelligence, Machine Learning, Data Analysis"
+      },
+      {
+        degree: "Class XIIth (Intermediate)",
+        institution: "Best Model Public School, Hajipur, Vaishali, Bihar",
         startDate: "2023",
-        endDate: "2026",
-        grade: "A",
-        description: "Skills: C (Programming Language), Microsoft Office"
+        endDate: "2024",
+        description: "Completed Class XIIth education."
       },
       {
-        degree: "Intermediate",
-        institution: "Baba International School",
-        startDate: "2022",
-        endDate: "2023",
-        grade: "A"
-      },
-      {
-        degree: "Highschool",
-        institution: "Baba International School",
-        startDate: "2020",
-        endDate: "2021",
-        grade: "A"
+        degree: "Class Xth (High School) - 80%",
+        institution: "Shri Guru Nanak Khalsa Girls Senior Secondary School, Delhi Cantt-10",
+        startDate: "2021",
+        endDate: "2022",
+        description: "Completed Class Xth with 80% marks."
       }
     ]
   });
@@ -225,82 +178,34 @@ async function main() {
   await prisma.achievement.createMany({
     data: [
       {
-        title: "Certificate of Participation in Capture The Flag of Pragyan'25",
-        issuer: "Unstop",
-        date: "Feb 2025",
-        description: "Credential ID 0e608f34-e494-4d97-a5dc-e015663d2431"
+        title: "Getting Started with Artificial Intelligence",
+        issuer: "LinkedIn/Microsoft",
+        date: "2024",
+        description: "AI Basics"
       },
       {
-        title: "SQL and Relational Databases 101",
-        issuer: "Cognitive Class",
-        date: "Feb 2025",
-        description: "Credential ID 82871d7011b24b38bbe2a18bb6e8cb3a"
+        title: "Programming Foundations: Data Structures",
+        issuer: "Certification Provider",
+        date: "2023",
+        description: "Data Structures"
       },
       {
-        title: "Python for Data Science",
-        issuer: "IBM",
-        date: "Feb 2025",
-        description: "Data Science Certification"
+        title: "AICTE – EduSkills Virtual Internship Program (Data Science Master)",
+        issuer: "AICTE / EduSkills",
+        date: "2024",
+        description: "Data Science Internship"
       },
       {
-        title: "Python 101 for Data Science",
-        issuer: "United Latino Students Association",
-        date: "Feb 2025",
-        description: "Credential ID 75e472e44d194a02afd3ed1c8c75b8e6"
+        title: "Career Essentials in Data Analysis",
+        issuer: "Microsoft and LinkedIn",
+        date: "2024",
+        description: "Data Analysis Essentials"
       },
       {
-        title: "Certificate of Participation in Weekly Coding Challenge 10",
-        issuer: "Unstop",
-        date: "Jan 2025",
-        description: "Credential ID cf3a253e-dd87-4524-b3aa-26989f3f5d65"
-      },
-      {
-        title: "Full Stack Development",
-        issuer: "Codec Technologies India",
-        date: "Dec 2024",
-        description: "Credential ID #3b9042bc27c1ce10 | Skills: Full-Stack Development, MERN"
-      },
-      {
-        title: "Certificate of Participation in Idea Submission Round of Void Hacks() 6.0",
-        issuer: "Unstop",
-        date: "Dec 2024",
-        description: "Credential ID 335a33a1-15de-4081-b166-45f5f1467098"
-      },
-      {
-        title: "node(basic)",
-        issuer: "HackerRank",
-        date: "Jul 2024",
-        description: "Basic Node.js Certification"
-      },
-      {
-        title: "Data Visualization With Power BI course",
-        issuer: "Great Learning",
-        date: "Aug 2024",
-        description: "Skills: visualization of power BI"
-      },
-      {
-        title: "Power BI Micro Course",
-        issuer: "coursepe",
-        date: "Sep 2024",
-        description: "Credential ID SQ21T01 | Skills: Microsoft Power BI"
-      },
-      {
-        title: "AI Fundamentals for Data Professionals",
-        issuer: "LinkedIn",
-        date: "Jan 2024",
-        description: "Skills: Data Science, Artificial Intelligence (AI)"
-      },
-      {
-        title: "Learning Word Desktop (Microsoft 365)",
-        issuer: "LinkedIn",
-        date: "Jan 2024",
-        description: "Skills: Microsoft Word"
-      },
-      {
-        title: "Learning Excel Desktop (Microsoft 365)",
-        issuer: "LinkedIn",
-        date: "Jan 2024",
-        description: "Skills: Office 365, Microsoft Excel"
+        title: "Python Essential Training",
+        issuer: "Certification Provider",
+        date: "2024",
+        description: "Python Training"
       }
     ]
   });

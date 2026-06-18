@@ -29,23 +29,17 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-4">
-            <Link href="https://github.com/alokydv9045" target="_blank" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-blue/50 transition-colors">
-              <GitBranch className="w-5 h-5" />
-            </Link>
-            <Link href="https://www.linkedin.com/in/alok-yadav-906920292/" target="_blank" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-[#0a66c2] hover:border-[#0a66c2]/50 transition-colors">
+            <Link href="https://linkedin.com/in/tannupriya" target="_blank" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-[#0a66c2] hover:border-[#0a66c2]/50 transition-colors">
               <Briefcase className="w-5 h-5" />
             </Link>
-            <Link href="https://twitter.com/alokyadav" target="_blank" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-[#1d9bf0] hover:border-[#1d9bf0]/50 transition-colors">
-              <Hash className="w-5 h-5" />
-            </Link>
-            <Link href="mailto:Alokyadav83956@gmail.com" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">
+            <Link href="mailto:tannup245@gmail.com" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">
               <Mail className="w-5 h-5" />
             </Link>
           </div>
         </div>
         
         <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© {currentYear} Alok Yadav. All rights reserved.</p>
+          <p>© {currentYear} Tannu Priya. All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
             <Link href="/projects" className="hover:text-gray-300 transition-colors">Projects</Link>

@@ -15,7 +15,7 @@ interface LeetCodeStats {
   ranking: number;
 }
 
-export default async function LeetCodeCard({ username = "alokyadav9045" }: { username?: string }) {
+export default async function LeetCodeCard({ username = "tannupriya" }: { username?: string }) {
   let stats: LeetCodeStats | null = null;
   
   try {

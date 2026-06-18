@@ -8,20 +8,20 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore Alok Yadav's portfolio of 50+ projects – scalable web applications, startup platforms, and intelligent software systems built with React, Next.js, Node.js, and MongoDB.",
-  alternates: { canonical: "https://alokyadav.me/projects" },
+    "Explore Tannu Priya's portfolio of 50+ projects – scalable web applications, startup platforms, and intelligent software systems built with React, Next.js, Node.js, and MongoDB.",
+  alternates: { canonical: "https://tannupriya.me/projects" },
   openGraph: {
-    title: "Projects by Alok Yadav | Full Stack Developer",
+    title: "Projects by Tannu Priya | Full Stack Developer",
     description:
-      "Explore 50+ projects built by Alok Yadav, including scalable web apps, startup products, and intelligent software systems.",
-    url: "https://alokyadav.me/projects",
-    images: [{ url: "https://alokyadav.me/portfolio-screenshot.png", width: 1200, height: 630, alt: "Alok Yadav Projects" }],
+      "Explore 50+ projects built by Tannu Priya, including scalable web apps, startup products, and intelligent software systems.",
+    url: "https://tannupriya.me/projects",
+    images: [{ url: "https://tannupriya.me/portfolio-screenshot.png", width: 1200, height: 630, alt: "Tannu Priya Projects" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Projects by Alok Yadav",
-    description: "Explore 50+ real-world projects by Full Stack Developer Alok Yadav.",
-    images: ["https://alokyadav.me/portfolio-screenshot.png"],
+    title: "Projects by Tannu Priya",
+    description: "Explore 50+ real-world projects by Full Stack Developer Tannu Priya.",
+    images: ["https://tannupriya.me/portfolio-screenshot.png"],
   },
 };
 

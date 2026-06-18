@@ -44,7 +44,7 @@ export default function FloatingContact() {
       >
         {/* WhatsApp Button */}
         <Link
-          href="https://wa.me/916395707468" // <-- Replace with your actual WhatsApp number
+          href="https://wa.me/917979072394" // <-- Replace with your actual WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-transform flex items-center justify-center group border border-white/10"
@@ -62,7 +62,7 @@ export default function FloatingContact() {
 
         {/* Phone Button */}
         <Link
-          href="tel:+916395707468" // <-- Replace with your actual phone number
+          href="tel:+917979072394" // <-- Replace with your actual phone number
           className="bg-neon-blue text-black p-3 sm:p-4 rounded-full shadow-lg shadow-neon-blue/30 hover:scale-110 transition-transform flex items-center justify-center group border border-white/10"
           title="Call Me"
         >

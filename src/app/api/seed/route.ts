@@ -5,14 +5,14 @@ import bcrypt from 'bcryptjs';
 export async function GET() {
   try {
     // Seed Admin
-    const adminExists = await prisma.admin.findUnique({ where: { email: 'admin@alokyadav.com' } });
+    const adminExists = await prisma.admin.findUnique({ where: { email: 'admin@tannupriya.com' } });
     if (!adminExists) {
       const hashedPassword = await bcrypt.hash('admin123', 10);
       await prisma.admin.create({
         data: {
-          email: 'admin@alokyadav.com',
+          email: 'admin@tannupriya.com',
           password: hashedPassword,
-          name: 'Alok Yadav',
+          name: 'Tannu Priya',
         }
       });
     }
@@ -22,13 +22,13 @@ export async function GET() {
     if (!profileExists) {
       await prisma.profileInfo.create({
         data: {
-          name: "Alok Yadav",
+          name: "Tannu Priya",
           titles: ["Full Stack Developer", "Tech Associate", "Startup Builder"],
           bio: "I build scalable web applications, intelligent software systems, and real-world digital products that solve meaningful problems. Currently serving as a Tech Associate at Invertis Innovation & Incubation.",
-          heroImage: "/alok-2.jpeg",
-          githubUrl: "https://github.com/alokyadav",
-          linkedinUrl: "https://linkedin.com/in/alokyadav",
-          emailAddress: "admin@alokyadav.com"
+          heroImage: "/portfolio-screenshot.png",
+          githubUrl: "https://github.com/tannupriya",
+          linkedinUrl: "https://linkedin.com/in/tannupriya",
+          emailAddress: "admin@tannupriya.com"
         }
       });
     }

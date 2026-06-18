@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GitBranch } from "lucide-react";
 import Link from "next/link";
 
-export default function GithubCalendarCard({ username = "alokydv9045" }: { username?: string }) {
+export default function GithubCalendarCard({ username = "tannupriya" }: { username?: string }) {
   return (
     <Link href={`https://github.com/${username}`} target="_blank" className="block w-full h-full">
       <Card className="glass-card hover:border-neon-blue/50 transition-all duration-300 group overflow-hidden relative h-full flex flex-col justify-center">

@@ -1,6 +1,6 @@
-# Alok Yadav - Full Stack Developer Portfolio
+# Tannu Priya - Portfolio
 
-Welcome to the open-source repository of my personal portfolio website. This project is a modern, high-performance web application designed to showcase my skills, projects, and professional journey as a Full Stack Developer and Tech Associate.
+Welcome to the open-source repository of my personal portfolio website. This project is a modern, high-performance web application designed to showcase my skills, projects, and professional journey as a Python Intern, AI & Data Science Enthusiast, and B.Tech CSE Student.
 
 ![Portfolio Screenshot](./public/portfolio-screenshot.png)
 
@@ -9,9 +9,9 @@ Welcome to the open-source repository of my personal portfolio website. This pro
 - **Modern UI/UX**: Designed with a sleek, dark-themed glassmorphic aesthetic.
 - **Dynamic Animations**: Powered by Framer Motion, featuring smooth scroll reveals, custom typing effects, and hover transitions.
 - **Full-Stack Architecture**: Built on Next.js 15+ (App Router) with Server-Side Rendering (SSR) for optimal SEO and performance.
-- **Database Driven**: Uses Prisma ORM and MongoDB to dynamically render projects, experiences, and deep project detail pages.
-- **Admin Dashboard**: A secure, fully functional admin interface to manage and update portfolio content (projects, skills, stats, etc.) on the fly.
-- **Live Integrations**: Real-time GitHub and LeetCode statistics fetching.
+- **Database Driven**: Uses Prisma ORM and MongoDB to dynamically render projects, experiences, education, and skills.
+- **Admin Dashboard**: A secure, fully functional admin interface to manage and update portfolio content on the fly.
+- **Resume Integration**: Direct link to view and download my professional resume.
 
 ## 🛠️ Tech Stack
 
@@ -34,8 +34,8 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/alokydv9045/Alok-portfolio-.git
-   cd alok-portfolio-nextjs
+   git clone <your-repo-link>
+   cd Tannu-portfolio
    ```
 
 2. **Install dependencies**
@@ -57,9 +57,9 @@ To run this project locally, follow these steps:
    ```
 
 5. **Seed the Database (Optional)**
-   You can seed the initial data (Admin user, Default projects) by navigating to the API route locally:
-   ```
-   http://localhost:3000/api/seed
+   You can seed the initial data (Admin user, Default projects) by running the seed script or navigating to the API route locally:
+   ```bash
+   node prisma/seed.js
    ```
 
 6. **Start the Development Server**

@@ -19,10 +19,11 @@ export default async function Page() {
 
   const data = {
     profile: profileInfo || {
-      name: "Alok Yadav",
-      titles: ["Full Stack Developer", "Tech Associate", "Startup Builder"],
-      bio: "I build scalable web applications, intelligent software systems, and real-world digital products that solve meaningful problems.",
-      heroImage: "/alok-2.jpeg",
+      name: "Tannu Priya",
+      titles: ["Python Intern", "AI & Data Science Enthusiast", "B.Tech CSE Student"],
+      bio: "I am a Computer Science Engineering student at Invertis University with a strong interest in Artificial Intelligence, Data Science, and Python Development. Currently working as a Python Intern at Aarvion Technologies, I am gaining practical experience in programming, problem-solving, and real-world application development.",
+      heroImage: "/portfolio-screenshot.png",
+      resumeLink: "/resume.pdf",
     },
     stats: stats.length > 0 ? stats : [
       { label: "Projects Built", value: "50+", icon: "Layout" },

@@ -18,7 +18,7 @@ export default async function AboutSection() {
             <TypingAnimation text="About Me" delay={0.1} highlight="Me" />
           </AnimatedHeading>
           <p className="text-lg text-gray-400 leading-relaxed text-justify">
-            I build scalable web applications, intelligent software systems, and real-world digital products that solve meaningful problems. Currently serving as a Tech Associate at Invertis Innovation & Incubation, I work on product development, startup incubation projects, AI-powered solutions, and enterprise-grade software systems.
+            Hello! I'm Tannu Priya, a dedicated Computer Science Engineering student pursuing my B.Tech from Invertis University. I enjoy exploring new technologies, solving coding challenges, and building practical solutions that create real-world impact. My goal is to develop strong technical expertise while contributing to innovative technology-driven projects.
           </p>
           
 
@@ -26,7 +26,7 @@ export default async function AboutSection() {
 
         <div className="relative h-[300px] lg:h-[380px] w-[85%] max-w-[340px] mx-auto rounded-3xl overflow-hidden glass-card border border-white/10">
           <Image 
-            src="/alok-2.jpeg"
+            src={profile?.heroImage || "/portfolio-screenshot.png"}
             alt="About me"
             fill
             priority
@@ -35,31 +35,12 @@ export default async function AboutSection() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/40 to-transparent" />
           <div className="absolute bottom-8 left-8 right-8 text-center">
-            <p className="text-2xl font-bold text-white mb-2">{profile?.name || "Alok Yadav"}</p>
-            <p className="text-neon-blue font-medium">{profile?.titles?.[0] || "Full Stack Developer"}</p>
+            <p className="text-2xl font-bold text-white mb-2">{profile?.name || "Tannu Priya"}</p>
+            <p className="text-neon-blue font-medium">{profile?.titles?.[0] || "Python Intern"}</p>
           </div>
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="mt-20 grid lg:grid-cols-2 gap-8 min-w-0 w-full">
-        <div className="flex flex-col h-full min-w-0 w-full">
-          <AnimatedHeading as="h2" className="text-3xl font-bold text-white mb-8 tracking-tight">
-            <TypingAnimation text="Problem Solving & DSA" delay={0.1} highlight="DSA" />
-          </AnimatedHeading>
-          <div className="flex-grow min-w-0 w-full">
-            <LeetCodeCard username="alokyadav9045" />
-          </div>
-        </div>
-        <div className="flex flex-col h-full min-w-0 w-full">
-          <AnimatedHeading as="h2" className="text-3xl font-bold text-white mb-8 tracking-tight">
-            <TypingAnimation text="Open Source & GitHub" delay={0.1} highlight="GitHub" />
-          </AnimatedHeading>
-          <div className="flex-grow min-w-0 w-full">
-            <GithubCalendarCard username="alokydv9045" />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

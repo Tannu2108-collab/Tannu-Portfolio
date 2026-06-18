@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/admin/", "/api/"],
       },
     ],
-    sitemap: "https://alokyadav.me/sitemap.xml",
-    host: "https://alokyadav.me",
+    sitemap: "https://tannupriya.me/sitemap.xml",
+    host: "https://tannupriya.me",
   };
 }

@@ -16,37 +16,32 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://alokyadav.me";
-const siteTitle = "Alok Yadav | Full Stack Developer & Startup Builder";
+const siteUrl = "https://tannupriya.me";
+const siteTitle = "Tannu Priya | Aspiring Software Engineer & AI Enthusiast";
 const siteDescription =
-  "Alok Yadav is a Full Stack Developer and Startup Builder from India. He builds scalable web apps, intelligent software systems, and real-world digital products using React, Next.js, Node.js, and MongoDB.";
+  "Tannu Priya is a Computer Science Engineering student and Python Intern from Bareilly, India. Transforming Ideas into Intelligent Solutions Through Technology. Building Skills in AI, Data Science & Python.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
-    template: "%s | Alok Yadav",
+    template: "%s | Tannu Priya",
   },
   description: siteDescription,
   keywords: [
-    "Alok Yadav",
-    "Full Stack Developer",
-    "Startup Builder",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "MongoDB",
-    "Web Developer India",
+    "Tannu Priya",
+    "Python Developer",
+    "AI Enthusiast",
+    "Data Science",
     "Software Engineer",
-    "Tech Associate",
-    "Invertis Innovation",
+    "Python Intern",
+    "Aarvion Technologies",
     "Portfolio",
-    "JavaScript Developer",
-    "TypeScript Developer",
+    "Machine Learning",
   ],
-  authors: [{ name: "Alok Yadav", url: siteUrl }],
-  creator: "Alok Yadav",
-  publisher: "Alok Yadav",
+  authors: [{ name: "Tannu Priya", url: siteUrl }],
+  creator: "Tannu Priya",
+  publisher: "Tannu Priya",
   robots: {
     index: true,
     follow: true,
@@ -62,15 +57,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Alok Yadav Portfolio",
+    siteName: "Tannu Priya Portfolio",
     title: siteTitle,
     description: siteDescription,
     images: [
       {
-        url: `${siteUrl}/alok-2.jpeg`,
+        url: `${siteUrl}/portfolio-screenshot.png`,
         width: 1200,
         height: 630,
-        alt: "Alok Yadav – Full Stack Developer & Startup Builder",
+        alt: "Tannu Priya – Full Stack Developer & Startup Builder",
       },
     ],
   },
@@ -78,8 +73,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    creator: "@alokyadav",
-    images: [`${siteUrl}/alok-2.jpeg`],
+    creator: "@tannupriya",
+    images: [`${siteUrl}/portfolio-screenshot.png`],
   },
   alternates: {
     canonical: siteUrl,
@@ -95,26 +90,23 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Alok Yadav",
+  name: "Tannu Priya",
   url: siteUrl,
-  image: `${siteUrl}/alok-2.jpeg`,
-  jobTitle: "Full Stack Developer & Startup Builder",
+  image: `${siteUrl}/portfolio-screenshot.png`,
+  jobTitle: "Python Intern & CSE Student",
   worksFor: {
     "@type": "Organization",
-    name: "Invertis Innovation & Incubation",
+    name: "Aarvion Technologies",
   },
   sameAs: [
-    "https://github.com/alokyadav",
-    "https://linkedin.com/in/alokyadav",
+    "https://linkedin.com/in/tannupriya",
   ],
   knowsAbout: [
-    "React",
-    "Next.js",
-    "Node.js",
-    "MongoDB",
-    "TypeScript",
-    "Full Stack Development",
-    "Startup Building",
+    "Python",
+    "Artificial Intelligence",
+    "Data Science",
+    "Machine Learning",
+    "Data Analysis",
   ],
   description: siteDescription,
 };
@@ -122,12 +114,12 @@ const personSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Alok Yadav Portfolio",
+  name: "Tannu Priya Portfolio",
   url: siteUrl,
   description: siteDescription,
   author: {
     "@type": "Person",
-    name: "Alok Yadav",
+    name: "Tannu Priya",
   },
   potentialAction: {
     "@type": "SearchAction",

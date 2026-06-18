@@ -72,7 +72,7 @@ export default function HomeClient({ data }: { data: { profile: { name: string; 
 
             <div className="text-gray-400 space-y-4 max-w-lg leading-relaxed text-justify">
               <p>
-                I build scalable web applications, intelligent software systems, and real-world digital products that solve meaningful problems. Currently serving as a Tech Associate at Invertis Innovation & Incubation, I work on product development, startup incubation projects, AI-powered solutions, and enterprise-grade software systems.
+                {profile.bio || "I am a Computer Science Engineering student at Invertis University with a strong interest in Artificial Intelligence, Data Science, and Python Development. Currently working as a Python Intern at Aarvion Technologies, I am gaining practical experience in programming, problem-solving, and real-world application development."}
               </p>
             </div>
 
@@ -101,8 +101,8 @@ export default function HomeClient({ data }: { data: { profile: { name: string; 
             
             <div className="relative w-full rounded-3xl overflow-hidden border border-white/10 flex items-end justify-center bg-card hover:border-neon-blue/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(0,210,255,0.1)]">
               <Image 
-                src="/alok-3.jpeg" 
-                alt="Alok Yadav" 
+                src={profile.heroImage as string || "/portfolio-screenshot.png"} 
+                alt={profile.name || "Tannu Priya"} 
                 width={1135}
                 height={1600}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -111,8 +111,8 @@ export default function HomeClient({ data }: { data: { profile: { name: string; 
               />
               <div className="absolute bottom-3 glass-card py-2 px-4 rounded-xl flex items-center gap-3 w-[92%] backdrop-blur-xl border border-white/20 bg-black/40">
                 <div>
-                  <p className="font-semibold text-white text-xs sm:text-sm leading-tight">Tech Associate & Full Stack Developer</p>
-                  <p className="text-[10px] sm:text-xs text-gray-300 mt-0.5">Invertis Innovation & Incubation</p>
+                  <p className="font-semibold text-white text-xs sm:text-sm leading-tight">{profile.titles?.[0] || "Python Intern"}</p>
+                  <p className="text-[10px] sm:text-xs text-gray-300 mt-0.5">Aarvion Technologies</p>
                 </div>
                 <div className="ml-auto w-2 h-2 bg-green-500 rounded-full animate-pulse shrink-0" />
               </div>
@@ -174,14 +174,14 @@ export default function HomeClient({ data }: { data: { profile: { name: string; 
             
             <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
               {[
-                { title: "Full Stack Web Development", icon: <Layout className="w-6 h-6" />, color: "text-blue-400" },
-                { title: "SaaS Product Development", icon: <Code className="w-6 h-6" />, color: "text-purple-400" },
-                { title: "AI-Powered Applications", icon: <BrainCircuit className="w-6 h-6" />, color: "text-pink-400" },
-                { title: "Startup MVP Development", icon: <Rocket className="w-6 h-6" />, color: "text-orange-400" },
-                { title: "Database Architecture", icon: <Database className="w-6 h-6" />, color: "text-teal-400" },
-                { title: "Cloud & DevOps Solutions", icon: <Cloud className="w-6 h-6" />, color: "text-cyan-400" },
-                { title: "UI/UX Focused Design", icon: <Monitor className="w-6 h-6" />, color: "text-indigo-400" },
-                { title: "Enterprise Software Systems", icon: <Shield className="w-6 h-6" />, color: "text-green-400" }
+                { title: "Python Programming", icon: <Code className="w-6 h-6" />, color: "text-blue-400" },
+                { title: "Artificial Intelligence", icon: <BrainCircuit className="w-6 h-6" />, color: "text-purple-400" },
+                { title: "Data Science", icon: <Database className="w-6 h-6" />, color: "text-pink-400" },
+                { title: "Machine Learning", icon: <Monitor className="w-6 h-6" />, color: "text-orange-400" },
+                { title: "Data Analysis", icon: <LineChart className="w-6 h-6" />, color: "text-teal-400" },
+                { title: "Problem Solving", icon: <Target className="w-6 h-6" />, color: "text-cyan-400" },
+                { title: "Technology Innovation", icon: <Rocket className="w-6 h-6" />, color: "text-indigo-400" },
+                { title: "Algorithm Design", icon: <Zap className="w-6 h-6" />, color: "text-green-400" }
               ].map((service, i) => (
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -212,11 +212,11 @@ export default function HomeClient({ data }: { data: { profile: { name: string; 
             
             <div className="space-y-4">
               {[
-                { title: "Smart Transportation Systems", icon: <Car className="w-5 h-5 text-purple-400" /> },
-                { title: "AI Voice Operating Systems", icon: <Mic className="w-5 h-5 text-blue-400" /> },
-                { title: "Tourism Technology Platforms", icon: <Plane className="w-5 h-5 text-cyan-400" /> },
-                { title: "University Digital Transformation", icon: <Building className="w-5 h-5 text-indigo-400" /> },
-                { title: "Startup Ecosystem Products", icon: <Rocket className="w-5 h-5 text-pink-400" /> }
+                { title: "AI-Based Solutions", icon: <BrainCircuit className="w-5 h-5 text-purple-400" /> },
+                { title: "Data Science Learning Projects", icon: <Database className="w-5 h-5 text-blue-400" /> },
+                { title: "Python Automation", icon: <Code className="w-5 h-5 text-cyan-400" /> },
+                { title: "Intelligent Systems", icon: <Zap className="w-5 h-5 text-indigo-400" /> },
+                { title: "Data Visualization", icon: <LineChart className="w-5 h-5 text-pink-400" /> }
               ].map((item, i) => (
                 <motion.div 
                   initial={{ opacity: 0, x: 20 }}
