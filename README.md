@@ -2,7 +2,7 @@
 
 Welcome to the open-source repository of my personal portfolio website. This project is a modern, high-performance web application designed to showcase my skills, projects, and professional journey as a Python Intern, AI & Data Science Enthusiast, and B.Tech CSE Student.
 
-![Portfolio Screenshot](./public/portfolio-screenshot.png)
+
 
 ## 🌟 Features
 
